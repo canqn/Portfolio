@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import imgAbout from '../../../image/about.jpg'
+import imgAbout from '../../../image/about1.jpg'
 import { UilDownloadAlt } from '@iconscout/react-unicons'
 
 const About = () => {
     return (
         <>
-            <section className='section about'>
+            <section className='section about' id='about'>
                 <h2 className='section__title'>About Me</h2>
                 <span className='section__subtitle'>My introduction</span>
 

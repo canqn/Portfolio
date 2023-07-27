@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+//import ThemeContextWrapper from './context/ThemeContextWrapper'
+{/*<ThemeContextWrapper> </ThemeContextWrapper>*/ }
 ReactDOM.render(
+
+
   <React.StrictMode>
     <App />
   </React.StrictMode>,

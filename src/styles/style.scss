@@ -1,8 +1,28 @@
 /*==================== PERSONAL PORTFOLIO ====================*/
-
+/*=============== VARIABLES CSS ===============*/
+/* @import './config/variables';*/
+@import 'config/css_variables';
 /*Import utilities*/
-@import 'core/utils/fonts';
-@import 'core/utils/base';
-
-/*Import core style */
-@import 'core/core'
+@import 'config/fonts';
+@import 'base/base';
+/*==================== LAYOUT ====================*/
+@import 'layout/layout';
+/*==================== COMPONENTS ====================*/
+@import 'components/header';
+@import 'components/home';
+@import 'components/about';
+@import 'components/button';
+@import './components/skills';
+@import 'components/qualification';
+@import 'components/services';
+@import 'components/portfolio';
+@import 'components/project';
+@import 'components/testimonial';
+@import 'components/contact';
+@import 'components/footer';
+@import 'components/scrollBar';
+@import 'components/scrollUp';
+/*=============== MEDIA QUERIES ===============*/
+@import 'components/mediaqueries';
+/*=============== THEME ===============*/
+@import 'theme/theme';

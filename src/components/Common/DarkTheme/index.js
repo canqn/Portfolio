@@ -1,18 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { UilEstate, UilUser, UilFileAlt, UilBriefcaseAlt, UilScenery, UilMessage, UilTimes, UilMoon, UilApps } from '@iconscout/react-unicons'
+import React, { useState } from 'react';
+import { UilMoon, UilSun } from '@iconscout/react-unicons'
+import { ThemeContext, themes } from '../../../context/ThemeContext';
+
 
 const DarkTheme = (props) => {
+    const [darkMode, setDarkMode] = useState(true)
     return (
         <>
-            <div className='nav__btns'>
-                {/* Theme change button */}
-                <UilMoon className='change-theme' id='theme-button' />
+            {/* Theme change button */}
+            <ThemeContext.Consumer>
+                {({ changeTheme }) => (
+                    <div
+                        className='btn__theme'
+                        onClick={() => {
+                            setDarkMode(!darkMode);
+                            changeTheme(darkMode ? themes.light : themes.dark);
+                        }}
+                    >
+                        {darkMode ? (<UilMoon className='change-theme' id='theme-button' />) : (<UilSun className='change-theme' id='theme-button' />)}
+                    </div>
+                )}
+            </ThemeContext.Consumer>
 
-                <div className='nav__toggle' id='nav-toggle'>
-                    <UilApps />
-                </div>
-            </div>
+
+
         </>
     );
 };
